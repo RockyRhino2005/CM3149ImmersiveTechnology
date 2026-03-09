@@ -9,9 +9,9 @@ public class SnapPoint : MonoBehaviour
     {
         if (other.name == correctObjectName)
         {
-            isCorrect = true;
-            Debug.Log("Correct object placed!");
-            PuzzleManager.instance.CheckPuzzle();
+            // isCorrect = true;
+            // Debug.Log("Correct object placed!");
+            // PuzzleManager.instance.CheckPuzzle();
         }
     }
 
