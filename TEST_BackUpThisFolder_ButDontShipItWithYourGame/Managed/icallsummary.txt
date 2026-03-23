@@ -315,7 +315,9 @@ UnityEngine.AnimationState::set_speed_Injected
 UnityEngine.Animator::get_hasBoundPlayables_Injected
 UnityEngine.Animator::ResetTriggerString_Injected
 UnityEngine.Animator::SetBoolString_Injected
+UnityEngine.Animator::SetIntegerString_Injected
 UnityEngine.Animator::SetTriggerString_Injected
+UnityEngine.Animator::set_speed_Injected
 UnityEngine.Application::get_isBatchMode
 UnityEngine.Application::get_isFocused
 UnityEngine.Application::get_isPlaying
@@ -549,6 +551,7 @@ UnityEngine.CullingGroup::SetDistanceReferencePoint_InternalVector3_Injected
 UnityEngine.CullingGroup::set_targetCamera_Injected
 UnityEngine.Cursor::SetCursor_Injected
 UnityEngine.Cursor::set_lockState
+UnityEngine.Cursor::set_visible
 UnityEngine.Cursor::get_lockState
 UnityEngine.Debug::get_isDebugBuild
 UnityEngine.Debug::ExtractStackTraceNoAlloc_Injected
@@ -807,6 +810,7 @@ UnityEngine.HDROutputSettings::SetAutomaticHDRTonemapping
 UnityEngine.HDROutputSettings::GetDisplayColorGamut
 UnityEngine.HDROutputSettings::GetGraphicsFormat
 UnityEngine.Input::CheckDisabled
+UnityEngine.Input::GetKeyDownInt
 UnityEngine.Input::GetKeyInt
 UnityEngine.Input::GetMouseButton
 UnityEngine.Input::GetMouseButtonDown
@@ -855,6 +859,7 @@ UnityEngine.Jobs.TransformAccessArray::DestroyTransformAccessArray
 UnityEngine.Jobs.TransformAccessArray::RemoveAtSwapBack
 UnityEngine.JsonUtility::FromJsonInternal_Injected
 UnityEngine.JsonUtility::ToJsonInternal_Injected
+UnityEngine.LayerMask::NameToLayer_Injected
 UnityEngine.Light::get_enableSpotReflector_Injected
 UnityEngine.Light::get_useColorTemperature_Injected
 UnityEngine.Light::get_cookie_Injected
@@ -882,6 +887,7 @@ UnityEngine.LightProbesQuery::Create
 UnityEngine.LightProbesQuery::CalculateInterpolatedLightAndOcclusionProbes
 UnityEngine.LightProbesQuery::Destroy
 UnityEngine.LineRenderer::get_useWorldSpace_Injected
+UnityEngine.LineRenderer::get_positionCount_Injected
 UnityEngine.LineRenderer::GetColorGradientCopy_Injected
 UnityEngine.LineRenderer::get_endWidth_Injected
 UnityEngine.LineRenderer::get_startWidth_Injected
@@ -1102,9 +1108,11 @@ UnityEngine.ParticleSystem::Emit_Injected
 UnityEngine.ParticleSystem::Emit_Internal_Injected
 UnityEngine.ParticleSystem::Play_Injected
 UnityEngine.ParticleSystem::SetParticles_Injected
+UnityEngine.ParticleSystem::Stop_Injected
 UnityEngine.ParticleSystem/MainModule::get_startColorBlittable_Injected
 UnityEngine.ParticleSystem/MainModule::get_startSizeBlittable_Injected
 UnityEngine.ParticleSystemRenderer::GetMeshes_Injected
+UnityEngine.Physics::CheckCapsule_Internal_Injected
 UnityEngine.Physics::GetIgnoreCollision_Injected
 UnityEngine.Physics::get_invokeCollisionCallbacks
 UnityEngine.Physics::get_queriesHitTriggers
@@ -1117,6 +1125,7 @@ UnityEngine.Physics::SendOnCollisionEnter_Injected
 UnityEngine.Physics::SendOnCollisionExit_Injected
 UnityEngine.Physics::SendOnCollisionStay_Injected
 UnityEngine.Physics::get_gravity_Injected
+UnityEngine.Physics::OverlapSphere_Internal_Injected
 UnityEngine.Physics2D::get_queriesHitTriggers
 UnityEngine.Physics2D::GetRayIntersectionAll_Internal_Injected
 UnityEngine.PhysicsScene::Internal_RaycastTest_Injected
@@ -1582,6 +1591,7 @@ UnityEngine.SceneManagement.Scene::GetIsLoadedInternal_Injected
 UnityEngine.SceneManagement.Scene::IsValidInternal_Injected
 UnityEngine.SceneManagement.Scene::GetRootCountInternal_Injected
 UnityEngine.SceneManagement.Scene::GetGUIDInternal_Injected
+UnityEngine.SceneManagement.Scene::GetNameInternal_Injected
 UnityEngine.SceneManagement.Scene::GetRootGameObjectsInternal_Injected
 UnityEngine.SceneManagement.SceneManager::get_sceneCount
 UnityEngine.SceneManagement.SceneManager::GetActiveScene_Injected
@@ -1701,6 +1711,8 @@ UnityEngine.TerrainData::Internal_GetHeights_Injected
 UnityEngine.TerrainData::Internal_GetTreeInstances_Injected
 UnityEngine.TerrainData::get_heightmapScale_Injected
 UnityEngine.TerrainData::get_size_Injected
+UnityEngine.TerrainData::set_wavingGrassSpeed_Injected
+UnityEngine.TerrainData::set_wavingGrassStrength_Injected
 UnityEngine.TerrainData::get_users_Injected
 UnityEngine.TerrainData::get_treePrototypes_Injected
 UnityEngine.TextAsset::get_bytes_Injected
@@ -1877,6 +1889,7 @@ UnityEngine.Transform::GetChild_Injected
 UnityEngine.Transform::GetParent_Injected
 UnityEngine.Transform::GetLocalPositionAndRotation_Injected
 UnityEngine.Transform::GetPositionAndRotation_Injected
+UnityEngine.Transform::Internal_LookAt_Injected
 UnityEngine.Transform::InverseTransformDirection_Injected
 UnityEngine.Transform::InverseTransformPoint_Injected
 UnityEngine.Transform::InverseTransformVector_Injected
@@ -1973,6 +1986,7 @@ UnityEngine.Video.VideoPlayer::Play_Injected
 UnityEngine.Video.VideoPlayer::set_frame_Injected
 UnityEngine.Video.VideoPlayer::set_playOnAwake_Injected
 UnityEngine.Video.VideoPlayer::set_targetTexture_Injected
+UnityEngine.WindZone::get_windMain_Injected
 UnityEngine.XR.InputDevices::IsDeviceValid
 UnityEngine.XR.InputDevices::SendHapticImpulse
 UnityEngine.XR.InputDevices::TryGetFeatureValue_Quaternionf_Injected
