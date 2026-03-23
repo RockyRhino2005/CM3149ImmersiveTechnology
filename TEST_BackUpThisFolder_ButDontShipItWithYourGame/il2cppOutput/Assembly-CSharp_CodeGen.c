@@ -7,6 +7,9 @@
 
 
 
+extern void DoorTrigger_OpenDoor_m4835D3FDC715C63368788B574DE42F0EB7D51C48 (void);
+extern void DoorTrigger_CloseDoor_m6B2D098E1DB0F0B3A26A250290EFD490F4B912E4 (void);
+extern void DoorTrigger__ctor_m0B4A73B23EC8FA797A1AA598CA2968C7F58B954B (void);
 extern void ElectricTarget_Start_m5E9A3B5EED58A81056201393D51FD1CC78EDDE54 (void);
 extern void ElectricTarget_Update_mDF45B0DDC3273722A1E1ADF4C9E4A63FB1056BAF (void);
 extern void ElectricTarget__ctor_mA58DD10B7C8462EA2EF14D0308998B2CBCDF96FE (void);
@@ -589,8 +592,11 @@ extern void UISaveMenu_SaveMenu_m770BD684C445E8E093F0D7270BCCD81186F11ECA (void)
 extern void UISaveMenu_ClickAcceptSave_mCDD0594812C7DB9FBF06025E87C3F77BC2579231 (void);
 extern void UISaveMenu_ClickCancelSave_m49EF80E534AB5D11F8EDC193630F03FA628E323A (void);
 extern void UISaveMenu__ctor_mBD67F37A78DB4EFF916937D5E0314FBC34F9DE34 (void);
-static Il2CppMethodPointer s_methodPointers[593] = 
+static Il2CppMethodPointer s_methodPointers[596] = 
 {
+	DoorTrigger_OpenDoor_m4835D3FDC715C63368788B574DE42F0EB7D51C48,
+	DoorTrigger_CloseDoor_m6B2D098E1DB0F0B3A26A250290EFD490F4B912E4,
+	DoorTrigger__ctor_m0B4A73B23EC8FA797A1AA598CA2968C7F58B954B,
 	ElectricTarget_Start_m5E9A3B5EED58A81056201393D51FD1CC78EDDE54,
 	ElectricTarget_Update_mDF45B0DDC3273722A1E1ADF4C9E4A63FB1056BAF,
 	ElectricTarget__ctor_mA58DD10B7C8462EA2EF14D0308998B2CBCDF96FE,
@@ -1191,13 +1197,16 @@ extern void TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F03
 extern void TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[4] = 
 {
-	{ 0x0600008E, TrackedRotation_get_totalOffset_mC129829FFE6CDD96C8885030BDAEF40D569F06C8_AdjustorThunk },
-	{ 0x0600008F, TrackedRotation_Reset_m54545DE2D01827833956AEC4324C136A0CB72425_AdjustorThunk },
-	{ 0x06000090, TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F033F1D26E_AdjustorThunk },
-	{ 0x06000091, TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk },
+	{ 0x06000091, TrackedRotation_get_totalOffset_mC129829FFE6CDD96C8885030BDAEF40D569F06C8_AdjustorThunk },
+	{ 0x06000092, TrackedRotation_Reset_m54545DE2D01827833956AEC4324C136A0CB72425_AdjustorThunk },
+	{ 0x06000093, TrackedRotation_SetBaseFromVector_m0CAD68507FD5C7AA3C7CAE09720645F033F1D26E_AdjustorThunk },
+	{ 0x06000094, TrackedRotation_SetTargetFromVector_m42F1586C38A41E0FB628220D326B1572BB8F80D7_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[593] = 
+static const int32_t s_InvokerIndices[596] = 
 {
+	16683,
+	16683,
+	16683,
 	16683,
 	16683,
 	16683,
@@ -1796,7 +1805,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	593,
+	596,
 	s_methodPointers,
 	4,
 	s_adjustorThunks,
