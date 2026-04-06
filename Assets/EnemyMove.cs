@@ -19,10 +19,13 @@ public class EnemyMove : MonoBehaviour
     {
         if (moving && !stopped)
         {
+            Vector3 target = targetPoint.position;
+            target.y = transform.position.y; // keep current height
+
             transform.position = Vector3.MoveTowards(
-                transform.position,
-                targetPoint.position,
-                speed * Time.deltaTime
+            transform.position,
+            target,
+            speed * Time.deltaTime
             );
 
             if (Vector3.Distance(transform.position, targetPoint.position) < 0.1f)
