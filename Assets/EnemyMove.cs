@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion;
 
 public class EnemyMove : MonoBehaviour
 {
@@ -9,6 +11,10 @@ public class EnemyMove : MonoBehaviour
     private bool stopped = false;
 
     private Animator anim;
+
+    public Transform playerCamera;   // XR Camera
+    public GameObject gameOverUI;    // World-space canvas
+    public float appearDistance = 2f;
 
     void Start()
     {
@@ -41,15 +47,52 @@ public class EnemyMove : MonoBehaviour
         anim.SetBool("Walking", true);
     }
 
-    public void StopEnemy()
+    public void DisableEnemy()
     {
         stopped = true;
-        anim.SetBool("Walking", false);
+        moving = false;
+
+        if (anim != null)
+        {
+            anim.SetBool("Walking", false);
+        }
+
+        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     void GameOver()
     {
         Debug.Log("Game Over");
-        // Load game over scene or restart
-    }
+
+        // Stop movement
+        moving = false;
+        stopped = true;
+
+        // Get position in front of player
+        Vector3 forward = playerCamera.forward;
+        forward.y = 0f; // keep it level
+
+        Vector3 spawnPos = playerCamera.position + forward.normalized * appearDistance;
+
+        // Move enemy in front of player
+        transform.position = spawnPos;
+
+        // Make enemy face the player
+        transform.LookAt(playerCamera);
+
+        // Optional: trigger animation
+        // if (anim != null)
+        // {
+        //     anim.SetBool("Walking", false);
+        //     anim.SetTrigger("Attack"); // if you have one
+        // }
+
+        // Show Game Over UI
+        if (gameOverUI != null)
+        {
+            gameOverUI.SetActive(true);
+        }
+
+}
 }

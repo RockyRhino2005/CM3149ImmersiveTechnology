@@ -14,7 +14,7 @@ public class SnapManager : MonoBehaviour
         CheckAllSnapped();
     }
 
-    public void ObjectUnsapped(SnapToPoint obj)
+    public void ObjectUnsnapped(SnapToPoint obj)
     {
         snappedObjects.Remove(obj);
     }

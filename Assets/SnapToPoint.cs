@@ -39,7 +39,7 @@ public class SnapToPoint : MonoBehaviour
             if (isSnapped)
             {
                 isSnapped = false;
-                snapManager.ObjectUnsapped(this);
+                snapManager.ObjectUnsnapped(this);
             }
         }
     }
