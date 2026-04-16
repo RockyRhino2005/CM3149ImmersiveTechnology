@@ -3,13 +3,13 @@ using UnityEngine;
 public class windmillSpin : MonoBehaviour
 {
     public float rotationSpeed = 100f;
-    public bool isSpinning = false;
+    public bool isSpinning = true;
 
      public void pushButton()
     {
-        bool isSpinning = true;
+        isSpinning = true;
     }
-    public void update()
+    public void Update()
     {
         if (isSpinning == true)
         {

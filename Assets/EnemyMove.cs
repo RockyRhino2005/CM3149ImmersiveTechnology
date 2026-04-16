@@ -81,13 +81,6 @@ public class EnemyMove : MonoBehaviour
         // Make enemy face the player
         transform.LookAt(playerCamera);
 
-        // Optional: trigger animation
-        // if (anim != null)
-        // {
-        //     anim.SetBool("Walking", false);
-        //     anim.SetTrigger("Attack"); // if you have one
-        // }
-
         // Show Game Over UI
         if (gameOverUI != null)
         {
