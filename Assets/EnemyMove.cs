@@ -16,6 +16,8 @@ public class EnemyMove : MonoBehaviour
     public GameObject gameOverUI;    // World-space canvas
     public float appearDistance = 2f;
 
+    public AudioSource audioSource;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -45,6 +47,7 @@ public class EnemyMove : MonoBehaviour
     {
         moving = true;
         anim.SetBool("Walking", true);
+        audioSource.Play();
     }
 
     public void DisableEnemy()
