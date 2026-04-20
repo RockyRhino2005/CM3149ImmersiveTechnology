@@ -17,6 +17,9 @@ public class EnemyMove : MonoBehaviour
     public float appearDistance = 2f;
 
     public AudioSource audioSource;
+    public AudioSource audioSourcedie;
+
+    public AudioSource audioSourceVoice;
 
     void Start()
     {
@@ -48,6 +51,7 @@ public class EnemyMove : MonoBehaviour
         moving = true;
         anim.SetBool("Walking", true);
         audioSource.Play();
+        audioSourceVoice.Play();
     }
 
     public void DisableEnemy()
@@ -59,6 +63,7 @@ public class EnemyMove : MonoBehaviour
         {
             anim.SetBool("Walking", false);
         }
+        audioSourcedie.Play();
 
         gameObject.SetActive(false);
         Destroy(gameObject);

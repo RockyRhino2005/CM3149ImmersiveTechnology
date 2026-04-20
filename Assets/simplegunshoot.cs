@@ -6,10 +6,13 @@ public class simplegunshoot : MonoBehaviour
     public Transform firePoint;
     public float bulletSpeed = 20f;
 
+    public AudioSource audioSource;
+
     public void Shoot(){
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.linearVelocity = firePoint.forward * bulletSpeed;
+        audioSource.Play();
     }
 }
