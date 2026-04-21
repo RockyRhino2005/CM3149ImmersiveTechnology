@@ -2193,13 +2193,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetPoint: {fileID: 1716073252}
-  speed: 0.1
+  speed: 0.2
   playerCamera: {fileID: 441087508}
   gameOverUI: {fileID: 751091845}
   appearDistance: 2
   audioSource: {fileID: 83938932}
   audioSourcedie: {fileID: 83938933}
   audioSourceVoice: {fileID: 83938935}
+  xrOrigin: {fileID: 854785472}
 --- !u!65 &83938930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17494,6 +17495,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2509cc5763ca17f4598bf61fd585a93e, type: 3}
   m_PrefabInstance: {fileID: 854301949}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &854785472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503725, guid: 37a6108e422559b409412dadf80d092b, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &863425642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20429,8 +20435,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.655569, y: 5.0588856, z: 0.68776894}
-  m_Center: {x: -0.7544122, y: 2.0294428, z: 0.15611553}
+  m_Size: {x: 3.655569, y: 5.0588856, z: 4.186466}
+  m_Center: {x: -0.7544122, y: 2.0294428, z: -1.5932331}
 --- !u!4 &1040056820
 Transform:
   m_ObjectHideFlags: 0
@@ -20629,7 +20635,7 @@ MonoBehaviour:
   rightDoor: {fileID: 899984720}
   slideDistance: 1.22
   slideSpeed: 2
-  delay: 5
+  delay: 22
 --- !u!65 &1046699462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32860,8 +32866,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.655569, y: 5.0588856, z: 0.68776894}
-  m_Center: {x: -0.7544122, y: 2.0294428, z: 0.15611553}
+  m_Size: {x: 3.655569, y: 5.0588856, z: 2.9502182}
+  m_Center: {x: -0.7544122, y: 2.0294428, z: -0.9751091}
 --- !u!1 &1734168304
 GameObject:
   m_ObjectHideFlags: 0
@@ -36898,7 +36904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a5b2b8a03795f4a9b525d9056d3656, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.06493
+      value: -4.61
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a5b2b8a03795f4a9b525d9056d3656, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36993,13 +36999,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetPoint: {fileID: 1040056820}
-  speed: 0.1
+  speed: 0.3
   playerCamera: {fileID: 441087508}
   gameOverUI: {fileID: 751091845}
   appearDistance: 2
   audioSource: {fileID: 1918815063}
   audioSourcedie: {fileID: 1918815064}
   audioSourceVoice: {fileID: 1918815066}
+  xrOrigin: {fileID: 854785472}
 --- !u!65 &1918815061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38883,13 +38890,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetPoint: {fileID: 1085057597}
-  speed: 0.1
+  speed: 0.3
   playerCamera: {fileID: 441087508}
   gameOverUI: {fileID: 751091845}
   appearDistance: 2
   audioSource: {fileID: 1980132730}
   audioSourcedie: {fileID: 1980132731}
   audioSourceVoice: {fileID: 1980132733}
+  xrOrigin: {fileID: 854785472}
 --- !u!65 &1980132728
 BoxCollider:
   m_ObjectHideFlags: 0

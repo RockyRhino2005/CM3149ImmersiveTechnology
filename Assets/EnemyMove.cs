@@ -21,9 +21,20 @@ public class EnemyMove : MonoBehaviour
 
     public AudioSource audioSourceVoice;
 
+    public GameObject xrOrigin;
+
+    // Locomotion components
+    private ContinuousMoveProviderBase moveProvider;
+    private ContinuousTurnProviderBase turnProvider;
+
     void Start()
     {
         anim = GetComponent<Animator>();
+        if (xrOrigin != null)
+        {
+            moveProvider = xrOrigin.GetComponent<ContinuousMoveProviderBase>();
+            turnProvider = xrOrigin.GetComponent<ContinuousTurnProviderBase>();
+        }
     }
 
     void Update()
@@ -38,20 +49,28 @@ public class EnemyMove : MonoBehaviour
             target,
             speed * Time.deltaTime
             );
-
-            if (Vector3.Distance(transform.position, targetPoint.position) < 0.1f)
-            {
-                GameOver();
-            }
         }
+
+        if (Vector3.Distance(transform.position, targetPoint.position) < 2f)
+{
+    GameOver();
+}
     }
 
     public void StartMoving()
     {
-        moving = true;
-        anim.SetBool("Walking", true);
-        audioSource.Play();
-        audioSourceVoice.Play();
+        if (!moving)
+        {
+            moving = true;
+            anim.SetBool("Walking", true);
+            audioSource.Play();
+            audioSourceVoice.Play();
+            Debug.Log("Enemy is moving.");
+        }
+        else
+        {
+            Debug.Log("Enemy is already moving.");
+        }
     }
 
     public void DisableEnemy()
@@ -77,23 +96,18 @@ public class EnemyMove : MonoBehaviour
         moving = false;
         stopped = true;
 
-        // Get position in front of player
-        Vector3 forward = playerCamera.forward;
-        forward.y = 0f; // keep it level
-
-        Vector3 spawnPos = playerCamera.position + forward.normalized * appearDistance;
-
-        // Move enemy in front of player
-        transform.position = spawnPos;
-
-        // Make enemy face the player
-        transform.LookAt(playerCamera);
-
         // Show Game Over UI
         if (gameOverUI != null)
         {
             gameOverUI.SetActive(true);
         }
+        // Disable movement
+        if (moveProvider != null)
+            moveProvider.enabled = false;
+
+        if (turnProvider != null)
+            turnProvider.enabled = false;
+
 
 }
 }
